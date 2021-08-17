@@ -48,7 +48,7 @@ class source_alphabet(gr.hier_block2):
 
 
 if __name__ == "__main__":
-    print "QA..."
+    print("QA...")
 
     # Test discrete source
     tb = gr.top_block()

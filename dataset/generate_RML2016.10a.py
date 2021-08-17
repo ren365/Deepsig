@@ -23,7 +23,7 @@ nvecs_per_key = 1000
 vec_length = 128
 snr_vals = range(-20,20,2)
 for snr in snr_vals:
-    print "snr is ", snr
+    print("snr is ", snr)
     for alphabet_type in transmitters.keys():
         for i,mod_type in enumerate(transmitters[alphabet_type]):
           dataset[(mod_type.modname, snr)] = np.zeros([nvecs_per_key, 2, vec_length], dtype=np.float32)
@@ -75,5 +75,5 @@ for snr in snr_vals:
                   # we're all done
                   insufficient_modsnr_vectors = False
 
-print "all done. writing to disk"
+print("all done. writing to disk")
 cPickle.dump( dataset, file("RML2016.10a_dict.dat", "wb" ) )
